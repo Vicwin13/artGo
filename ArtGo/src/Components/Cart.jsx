@@ -10,11 +10,14 @@ import image6 from "../Images/white_cart.svg";
 export default function Cart() {
   return (
     <>
-      <div className="flex p-16 justify-around bg-brown1 text-white size1:text-xl font-semibold">
+      <div className=" bg-brown1 text-white  font-semibold">
+       <div className=" flex-col md:flex-row p-8 text-sm w-fit mx-auto lg:text-xl justify-around">
+
         <p>Shopping Cart</p>
         <p>Purchases (12)</p>
         <p>Cart Items (2)</p>
         <p>Favorites (32)</p>
+       </div>
       </div>
       <section>
         <Link to="/">
@@ -26,8 +29,9 @@ export default function Cart() {
         <div className="">
           <div className="px-8 flex items-start gap-2 py-7">
             <input type="checkbox" />
-            <img src={image1} width="300px" alt="" />
-            <div className="pl-5">
+            <div className="flex lg:flex-row items-start flex-col">
+            <img src={image1} className="lg:w-[300px] w-[100px]" alt="" />
+            <div className="lg:pl-5 ">
               <p className="font-bold">Silence</p>
               <p>Type: Digital art</p>
               <p>Category: People</p>
@@ -47,17 +51,18 @@ export default function Cart() {
               </p>
               <p className="text-xl font-semibold">$3000</p>
             </div>
+            </div>
             <div>
               <img width="12px" src={cancel} alt="" />
             </div>
           </div>
           <hr />
-
-          <div className="flex px-8 py-7 items-start gap-2">
+          <div className="px-8 flex items-start gap-2 py-7">
             <input type="checkbox" />
-            <img src={image2} width="300px" alt="" />
-            <div className="pl-5">
-              <p className="font-bold">Ethereal</p>
+            <div className="lg:flex-row flex items-start flex-col">
+            <img src={image2} className="lg:w-[300px] w-[100px]" alt="" />
+            <div className="lg:pl-5 ">
+              <p className="font-bold"> Ethereal</p>
               <p>Type: Digital art</p>
               <p>Category: People</p>
               <p>Dimensions: 172.7 W x 172.7 H x 0.3 D cm</p>
@@ -76,17 +81,22 @@ export default function Cart() {
               </p>
               <p className="text-xl font-semibold">$3000</p>
             </div>
-            <div className="justify-self-end">
+            </div>
+            <div>
               <img width="12px" src={cancel} alt="" />
             </div>
           </div>
         </div>
 
-        <div className="flex items-center justify-center py-14">
-          <p className="p-2 px-4 border border-gray-300 text-lg">
+<div className="px-8">
+  <input type="checkbox" name="Select All" id="" />
+  <label htmlFor="Select All"> Select All</label>
+</div>
+        <div className=" flex lg:flex-row flex-col items-center justify-center py-14">
+          <p className="p-2 px-4  border align-center  lg:text-left border-gray-300 text-lg">
             Total: $6000
           </p>
-          <p className="p-2 px-4 text-lg border border-black bg-black text-white">
+          <p className="p-2 mt-1 md:mt-0 px-4 text-lg border lg:text-left text-center  border-black bg-black text-white">
             Proceed to checkout (2)
           </p>
         </div>

@@ -8,12 +8,13 @@ export default function Card() {
     <>
       <div className="px-8">
         <div className="flex justify-between pt-8 pb-7">
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-4 text-sm">
             <div className="size1:hidden flex gap-3 border p-2">
               <p>Filters</p> <img src={arrow} alt="" />
             </div>
-            <p>Shop</p>
-            <img src={forward} alt="" />
+
+            <p className=" hidden sm:block">Shop</p>
+            <img className="hidden sm:block" src={forward} alt="" />
             <p>Digital Art</p>
           </div>
           <div className="flex items-center gap-4 border p-1">
