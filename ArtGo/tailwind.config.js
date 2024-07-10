@@ -6,6 +6,7 @@ export default {
       screens: {
         size1: "850px",
         size3: "10px",
+        xs: "500px",
       },
       colors: {
         brown1: "rgba(74, 70, 65, 1)",

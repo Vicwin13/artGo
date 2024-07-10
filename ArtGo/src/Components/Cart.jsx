@@ -11,13 +11,12 @@ export default function Cart() {
   return (
     <>
       <div className=" bg-brown1 text-white  font-semibold">
-       <div className=" flex-col md:flex-row p-8 text-sm w-fit mx-auto lg:text-xl justify-around">
-
-        <p>Shopping Cart</p>
-        <p>Purchases (12)</p>
-        <p>Cart Items (2)</p>
-        <p>Favorites (32)</p>
-       </div>
+        <div className=" flex flex-col gap-4 md:flex-row p-8 text-sm w-fit mx-auto lg:text-xl justify-around">
+          <p>Shopping Cart</p>
+          <p>Purchases (12)</p>
+          <p>Cart Items (2)</p>
+          <p>Favorites (32)</p>
+        </div>
       </div>
       <section>
         <Link to="/">
@@ -30,27 +29,27 @@ export default function Cart() {
           <div className="px-8 flex items-start gap-2 py-7">
             <input type="checkbox" />
             <div className="flex lg:flex-row items-start flex-col">
-            <img src={image1} className="lg:w-[300px] w-[100px]" alt="" />
-            <div className="lg:pl-5 ">
-              <p className="font-bold">Silence</p>
-              <p>Type: Digital art</p>
-              <p>Category: People</p>
-              <p>Dimensions: 172.7 W x 172.7 H x 0.3 D cm</p>
-              <p>Year of Creation: 2016</p>
+              <img src={image1} className="lg:w-[300px] w-[100px]" alt="" />
+              <div className="lg:pl-5 ">
+                <p className="font-bold">Silence</p>
+                <p>Type: Digital art</p>
+                <p>Category: People</p>
+                <p>Dimensions: 172.7 W x 172.7 H x 0.3 D cm</p>
+                <p>Year of Creation: 2016</p>
 
-              <div className="flex gap-2">
-                <p>Quantity</p>
-                <select className="w-[4rem] p-1" name="Quantity" id="">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                </select>
+                <div className="flex items-center gap-2">
+                  <p>Quantity</p>
+                  <select className="w-[4rem] p-1 border" name="Quantity" id="">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+                <p className="text-xs py-4 text-green-500">
+                  Guaranteed arrival on 14th July if you order today
+                </p>
+                <p className="text-xl font-semibold">$3000</p>
               </div>
-              <p className="text-xs py-4 text-green-500">
-                Guaranteed arrival on 14th July if you order today
-              </p>
-              <p className="text-xl font-semibold">$3000</p>
-            </div>
             </div>
             <div>
               <img width="12px" src={cancel} alt="" />
@@ -60,27 +59,27 @@ export default function Cart() {
           <div className="px-8 flex items-start gap-2 py-7">
             <input type="checkbox" />
             <div className="lg:flex-row flex items-start flex-col">
-            <img src={image2} className="lg:w-[300px] w-[100px]" alt="" />
-            <div className="lg:pl-5 ">
-              <p className="font-bold"> Ethereal</p>
-              <p>Type: Digital art</p>
-              <p>Category: People</p>
-              <p>Dimensions: 172.7 W x 172.7 H x 0.3 D cm</p>
-              <p>Year of Creation: 2016</p>
+              <img src={image2} className="lg:w-[300px] w-[100px]" alt="" />
+              <div className="lg:pl-5 ">
+                <p className="font-bold"> Ethereal</p>
+                <p>Type: Digital art</p>
+                <p>Category: People</p>
+                <p>Dimensions: 172.7 W x 172.7 H x 0.3 D cm</p>
+                <p>Year of Creation: 2016</p>
 
-              <div className="flex gap-2">
-                <p>Quantity</p>
-                <select className="w-[4rem] p-1" name="Quantity" id="">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                </select>
+                <div className="flex items-center gap-2">
+                  <p>Quantity</p>
+                  <select className="w-[4rem] p-1 border" name="Quantity" id="">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </div>
+                <p className="text-xs py-4 text-green-500">
+                  Guaranteed arrival on 14th July if you order today
+                </p>
+                <p className="text-xl font-semibold">$3000</p>
               </div>
-              <p className="text-xs py-4 text-green-500">
-                Guaranteed arrival on 14th July if you order today
-              </p>
-              <p className="text-xl font-semibold">$3000</p>
-            </div>
             </div>
             <div>
               <img width="12px" src={cancel} alt="" />
@@ -88,19 +87,23 @@ export default function Cart() {
           </div>
         </div>
 
-<div className="px-8">
-  <input type="checkbox" name="Select All" id="" />
-  <label htmlFor="Select All"> Select All</label>
-</div>
-        <div className=" flex lg:flex-row flex-col items-center justify-center py-14">
-          <p className="p-2 px-4  border align-center  lg:text-left border-gray-300 text-lg">
-            Total: $6000
-          </p>
-          <p className="p-2 mt-1 md:mt-0 px-4 text-lg border lg:text-left text-center  border-black bg-black text-white">
-            Proceed to checkout (2)
-          </p>
+        <div className="px-8">
+          <input type="checkbox" name="Select All" id="" />
+          <label htmlFor="Select All"> Select All</label>
         </div>
-
+        <div className=" flex lg:flex-row flex-col items-center justify-center pt-14">
+          <p className="p-2 px-4  border align-center  lg:text-left border-gray-300 text-lg">
+            Total: $600
+          </p>
+          <Link to="/checkout">
+            <p className="p-2 mt-1 md:mt-0 px-4 text-lg border lg:text-left text-center  border-black bg-black text-white">
+              Proceed to checkout (2)
+            </p>
+          </Link>
+        </div>
+        <p className="text-center text-green-500 text-sm py-5">
+          Delivery fee included
+        </p>
         <hr />
 
         <div className="py-10">
